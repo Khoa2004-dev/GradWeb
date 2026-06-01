@@ -59,10 +59,10 @@ export default function CountdownBanner() {
       <div className="relative mx-auto max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold text-[#2a231d] sm:text-5xl mb-3">
-            Còn Lại
+            Chỉ Còn Lại
           </h2>
           <p className="text-lg text-[#5e544b]">
-            Chúng ta gặp nhau lần này để giao lưu, chia sẻ, và tưởng nhớ kỳ niệm.
+            Để chúng mình gặp nhau, giao lưu, chia sẻ, và có những tấm hình kỷ niệm đáng .
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export default function CountdownBanner() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-[#6b5a4a] font-medium tracking-wide">
-            📍 Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh
+            📍 Khu phố 34, Phường Linh Xuân, Thành phố Hồ Chí Minh
           </p>
         </div>
       </div>

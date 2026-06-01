@@ -103,7 +103,7 @@ export default function OGImage() {
             <div style={{ display: "flex", flexDirection: "column" }}>
               <span style={{ fontSize: "18px", color: "#8a735d" }}>📍 Địa điểm</span>
               <span style={{ fontSize: "32px", fontWeight: "bold", color: "#8f6a44", marginTop: "8px" }}>
-                UIT, HCM
+                Trường Đại học Công nghệ Thông tin - ĐHQG-HCM
               </span>
             </div>
           </div>

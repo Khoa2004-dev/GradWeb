@@ -24,7 +24,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-[#5e544b] sm:text-lg">
-              Một buổi lễ mang tinh thần ấm, sang và có điểm nhấn riêng. Không gian được thiết kế như một lời mời trân trọng hơn là một landing page thông thường.
+              Trân trọng kính mời mọi người đến tham dự buổi lễ tốt nghiệp của em / Khoa, sự xuất hiện của mọi người trong ngày đặc biệt này sẽ là niềm hạnh phúc rất lớn đối với em / Khoa.  
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -32,7 +32,7 @@ export default function Hero() {
                 href="#rsvp"
                 className="inline-flex items-center justify-center rounded-full bg-[#8f6a44] px-6 py-3.5 text-sm font-semibold text-[#fffaf4] shadow-[0_18px_40px_-20px_rgba(124,91,60,0.55)] transition-transform duration-300 hover:-translate-y-0.5 hover:bg-[#7a5837]"
               >
-                Gửi xác nhận tham dự
+                Xác nhận tham dự
               </a>
               <a
                 href="#event"
@@ -46,7 +46,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-[#8e6a43]/25 bg-[#f4e4d1] px-6 py-3.5 text-sm font-semibold text-[#5c4a35] backdrop-blur transition-all duration-300 hover:bg-[#ede1d0] hover:border-[#8e6a43]/40"
               >
-                📅 Thêm vào Google Calendar
+                📅 Thêm vào Calendar
               </a>
             </div>
 
@@ -58,8 +58,8 @@ export default function Hero() {
               </div>
               <div className="rounded-3xl border border-[#8e6a43]/12 bg-white/75 p-4 shadow-[0_20px_40px_-28px_rgba(124,91,60,0.25)] backdrop-blur-xl">
                 <p className="text-[11px] uppercase tracking-[0.28em] text-[#8a735d]">Địa điểm</p>
-                <p className="mt-2 text-sm font-semibold text-[#2f261f]">UIT</p>
-                <p className="text-sm text-[#6b5a4a]">Thủ Đức, TP.HCM</p>
+                <p className="mt-2 text-sm font-semibold text-[#2f261f]">Trường Đại học Công nghệ Thông tin - ĐHQG-HCM</p>
+                <p className="text-sm text-[#6b5a4a]">Khu phố 34, Phường Linh Xuân, Thành phố Hồ Chí Minh.</p>
               </div>
             </div>
           </div>

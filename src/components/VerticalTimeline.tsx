@@ -14,21 +14,21 @@ const milestones = [
   {
     year: "Năm 2",
     title: "Những đêm thức trắng fix bug",
-    description: "Chạy deadline đồ án, học hỏi từng lỗi và mỗi thất bại",
+    description: "Chạy deadline đồ án, học hỏi từ những sai lầm và thất bại",
     icon: Bug,
     color: "#7d5c3e"
   },
   {
     year: "Năm 3",
-    title: "AI chạy trên thực tế lần đầu",
-    description: "Lần đầu đưa mô hình AI vào thực tế & bài nghiên cứu đầu tay",
+    title: "Những bài nghiên cứu đầu tay",
+    description: "Lần đầu đưa mô hình AI vào thực tế & những bài nghiên cứu đầu tiên",
     icon: Brain,
     color: "#6b5139"
   },
   {
     year: "Năm 4",
-    title: "Cân bằng giữa công việc & đại học",
-    description: "Chặng rút đích, chuẩn bị bước vào thế giới chuyên nghiệp",
+    title: "Thực tập & đại học",
+    description: "Chặng cuối cùng, chuẩn bị bước vào hành trình mới với những trải nghiệm thực tế",
     icon: Briefcase,
     color: "#8a735d"
   }
@@ -49,7 +49,7 @@ export default function VerticalTimeline() {
             Hành Trình 4 Năm
           </h2>
           <p className="mt-4 text-lg text-[#5e544b]">
-            Từ những ngày đầu tiên đầy hồi hộp đến chặng đích
+            Từ những ngày đầu bỡ ngỡ đến vạch đích, mỗi bước đều là một kỷ niệm đáng nhớ.
           </p>
         </div>
 

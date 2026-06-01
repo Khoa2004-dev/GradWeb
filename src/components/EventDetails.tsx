@@ -56,8 +56,8 @@ export default function EventDetails() {
               </div>
             </div>
 
-            <p className="text-lg font-semibold text-[#2f261f]">Trường Đại học Công nghệ Thông tin (UIT)</p>
-            <p className="mt-2 text-[#6b5a4a]">Khu phố 6, P. Linh Trung, TP. Thủ Đức</p>
+            <p className="text-lg font-semibold text-[#2f261f]">Trường Đại học Công nghệ Thông tin - ĐHQG-HCM</p>
+            <p className="mt-2 text-[#6b5a4a]">Khu phố 34, Phường Linh Xuân, Thành phố Hồ Chí Minh.</p>
 
             <div className="mt-6 overflow-hidden rounded-2xl border border-[#8e6a43]/12 shadow-[0_12px_40px_-20px_rgba(124,91,60,0.25)]">
               <iframe
