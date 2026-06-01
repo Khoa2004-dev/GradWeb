@@ -63,8 +63,8 @@ function AnimatedCounter({ stat }: { stat: Stat }) {
 }
 
 const stats: Stat[] = [
-  { label: "Ngày gắn bó tại giảng đường", value: 1460, suffix: " ngày" },
-  { label: "Epochs đã train cho các model", value: 10000, prefix: "+", suffix: "" },
+  { label: "Ngày gắn bó tại giảng đường", value: 1000, suffix: "+ ngày" },
+  { label: "Deadline đã sống sót", value: 999, prefix: "", suffix: "+" },
   { label: "Ly cà phê đã tiêu thụ", value: 500, prefix: "", suffix: "+" },
   { label: "Chặng đường khép lại trọn vẹn", value: 1, suffix: "" }
 ];
@@ -72,7 +72,7 @@ const stats: Stat[] = [
 export default function FunFacts() {
   return (
     <ScrollReveal>
-      <section className="relative px-4 py-20 sm:py-32">
+      <section className="relative px-4 py-20 sm:py-32 bg-gradient-to-br from-[#f4e4d1]/35 via-white to-[#ede1d0]/25">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 right-[-10rem] h-96 w-96 rounded-full bg-[#d8b67e]/15 blur-3xl opacity-30" />
         <div className="absolute bottom-1/3 left-[-8rem] h-80 w-80 rounded-full bg-amber-200/15 blur-3xl opacity-30" />

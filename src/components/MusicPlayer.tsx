@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false); // Changed to false to not auto-load YouTube
-  const videoId = "9kzE8isXlQY";
+  const videoId = "JdqL89ZZwFw";
   const youtubeUrl = `https://www.youtube.com/embed/${videoId}?si=lgXXLJx2g009rppR&autoplay=1&controls=0`;
 
   return (

@@ -32,8 +32,8 @@ export default function RSVPForm() {
         <div className="mb-10 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8a735d]">RSVP</p>
           <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-[#2a231d] sm:text-5xl">Xác nhận tham dự</h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-[#6b5a4a] sm:text-base">
-            Chỉ mất vài giây để phản hồi, nhưng giúp mình chuẩn bị chu đáo hơn rất nhiều.
+          <p className="mx-auto mt-4 text-sm leading-7 text-[#6b5a4a] sm:text-base">
+            Chỉ mất vài giây thôi, nhưng nó giúp mình chuẩn bị cho các bạn chu đáo hơn rất nhiều.
           </p>
         </div>
         

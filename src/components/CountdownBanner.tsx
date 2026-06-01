@@ -62,7 +62,7 @@ export default function CountdownBanner() {
             Chỉ Còn Lại
           </h2>
           <p className="text-lg text-[#5e544b]">
-            Để chúng mình gặp nhau, giao lưu, chia sẻ, và có những tấm hình kỷ niệm đáng .
+            Để chúng mình gặp nhau, giao lưu, chia sẻ, và có những tấm hình kỷ niệm đáng nhớ.
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export default function CountdownBanner() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-[#6b5a4a] font-medium tracking-wide">
-            📍 Khu phố 34, Phường Linh Xuân, Thành phố Hồ Chí Minh
+            📍Trường Đại học Công nghệ Thông tin - Khu phố 34, Phường Linh Xuân, Thành phố Hồ Chí Minh
           </p>
         </div>
       </div>

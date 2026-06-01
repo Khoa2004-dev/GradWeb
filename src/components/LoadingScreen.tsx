@@ -18,11 +18,11 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
     const timers: ReturnType<typeof setTimeout>[] = [];
 
     const logLines = [
-      { id: "1", text: "$ Initializing graduation system...", delay: 300 },
-      { id: "2", text: "$ Loading 4 years of memories...", delay: 1000 },
-      { id: "3", text: "$ Compiling academic achievements...", delay: 1700 },
-      { id: "4", text: "$ Building gratitude database...", delay: 2400 },
-      { id: "5", text: "$ Generating celebration parameters...", delay: 3100 },
+      { id: "1", text: "$ Đang khởi tạo hệ thống tốt nghiệp...", delay: 300 },
+      { id: "2", text: "$ Đang tải 4 năm kinh nghiệm...", delay: 1000 },
+      { id: "3", text: "$ Đang biên soạn những thành tựu học thuật...", delay: 1700 },
+      { id: "4", text: "$ Đang xây dựng cơ sở dữ liệu lòng biết ơn...", delay: 2400 },
+      { id: "5", text: "$ Đang tạo ra các thông số cho buổi lễ kỷ niệm...", delay: 3100 },
     ];
 
     logLines.forEach((line) => {
@@ -130,10 +130,6 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
               <p className="text-center text-[#8a735d] font-mono text-sm">
                 Nhấn phím bất kỳ hoặc click để tiếp tục...
               </p>
-
-              <div className="text-center text-[#8f6a44]">
-                <span className="inline-block animate-pulse">↓</span>
-              </div>
             </div>
           )}
         </div>
