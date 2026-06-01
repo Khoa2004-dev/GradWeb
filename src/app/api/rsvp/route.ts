@@ -1,31 +1,25 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
+import { Redis } from '@upstash/redis';
 
-const GOOGLE_APPS_SCRIPT_URL = "URL_MỚI_SAU_KHI_DEPLOY_ANYONE";
+const redis = Redis.fromEnv();
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
+    
+    // IN THỬ RA TERMINAL XEM CÓ NHẬN ĐƯỢC CHỮ NÀO KHÔNG:
+    console.log("=== DATA FRONTEND GỬI LÊN ===", body);
+
     const { name, attendance, message } = body;
+    const timestamp = new Date().toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" });
+    
+    const rsvpData = { timestamp, name, attendance, message };
 
-    const res = await fetch(GOOGLE_APPS_SCRIPT_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, attendance, message }),
-    });
+    await redis.lpush("rsvp_list", JSON.stringify(rsvpData));
+    return NextResponse.json({ success: true }, { status: 200 });
 
-    // Tiện thể đọc luôn phản hồi từ Google xem họ báo gì
-    const googleData = await res.json(); 
-
-    return NextResponse.json(
-      { success: true, message: "Đã ghi nhận thành công", googleData },
-      { status: 200 }
-    );
   } catch (error: any) {
-    return NextResponse.json(
-      { success: false, message: "Có lỗi xảy ra từ server", error: error.message },
-      { status: 500 }
-    );
+    console.error("LỖI SẬP SERVER:", error.message);
+    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }
 }

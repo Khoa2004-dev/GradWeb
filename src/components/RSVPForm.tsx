@@ -4,25 +4,46 @@ import confetti from "canvas-confetti";
 import ScrollReveal from "./ScrollReveal";
 
 export default function RSVPForm() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
     
-    // Nơi gọi API Backend thực tế
-    // const res = await fetch('/api/rsvp', { method: 'POST', body: JSON.stringify({...}) });
+    // 1. Tự động thu thập toàn bộ dữ liệu từ các ô Input trong Form
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name");
+    const attendance = formData.get("attendance");
+    const message = formData.get("message");
     
-    setTimeout(() => {
+    try {
+      // 2. BẮN DATA THẬT QUA BACKEND API
+      const res = await fetch('/api/rsvp', { 
+        method: 'POST', 
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, attendance, message }) 
+      });
+      
+      if (!res.ok) {
+        throw new Error("Lỗi phản hồi từ Server");
+      }
+      
+      // 3. Nếu thành công thì đổi trạng thái và bắn pháo giấy
       setStatus("success");
-      // Bắn pháo giấy ăn mừng
       confetti({
         particleCount: 150,
         spread: 80,
         origin: { y: 0.6 },
         colors: ['#2c4c3b', '#d4af37', '#ffffff']
       });
-    }, 1000);
+
+    } catch (error) {
+      console.error("Lỗi khi gửi form:", error);
+      setStatus("error");
+      alert("Úi, có lỗi xảy ra rồi! Bạn thử gửi lại xem sao nhé.");
+    }
   };
 
   return (
@@ -44,23 +65,26 @@ export default function RSVPForm() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-5 rounded-[2rem] border border-[#8e6a43]/12 bg-white/75 p-6 shadow-[0_24px_80px_-48px_rgba(124,91,60,0.25)] backdrop-blur-md sm:p-8">
+            {/* THÊM THUỘC TÍNH name="name" vào input */}
             <div>
               <label className="mb-2 block text-sm font-medium text-[#4e4338]">Tên của bạn là gì nhỉ?</label>
-              <input required type="text" className="w-full rounded-2xl border border-[#8e6a43]/12 bg-[#f8f2e7] px-5 py-4 text-[#2f261f] placeholder:text-[#a28f7d] outline-none transition focus:border-[#8e6a43]/35 focus:ring-4 focus:ring-[#8e6a43]/10" placeholder="Nguyễn Văn A" />
+              <input required name="name" type="text" className="w-full rounded-2xl border border-[#8e6a43]/12 bg-[#f8f2e7] px-5 py-4 text-[#2f261f] placeholder:text-[#a28f7d] outline-none transition focus:border-[#8e6a43]/35 focus:ring-4 focus:ring-[#8e6a43]/10" placeholder="Nguyễn Văn A" />
             </div>
             
+            {/* THÊM THUỘC TÍNH name="attendance" vào select */}
             <div>
               <label className="mb-2 block text-sm font-medium text-[#4e4338]">Bạn có tham dự được không?</label>
-              <select required className="w-full rounded-2xl border border-[#8e6a43]/12 bg-[#f8f2e7] px-5 py-4 text-[#2f261f] outline-none transition focus:border-[#8e6a43]/35 focus:ring-4 focus:ring-[#8e6a43]/10 [&>option]:text-slate-900">
+              <select required name="attendance" className="w-full rounded-2xl border border-[#8e6a43]/12 bg-[#f8f2e7] px-5 py-4 text-[#2f261f] outline-none transition focus:border-[#8e6a43]/35 focus:ring-4 focus:ring-[#8e6a43]/10 [&>option]:text-slate-900">
                 <option value="yes">Chắc chắn có mặt!</option>
                 <option value="maybe">Mình sẽ cố gắng thu xếp</option>
                 <option value="no">Tiếc quá, mình bận mất rồi</option>
               </select>
             </div>
 
+            {/* THÊM THUỘC TÍNH name="message" vào textarea */}
             <div>
               <label className="mb-2 block text-sm font-medium text-[#4e4338]">Gửi vài lời chúc cho mình nhé!</label>
-              <textarea rows={4} className="w-full resize-none rounded-2xl border border-[#8e6a43]/12 bg-[#f8f2e7] px-5 py-4 text-[#2f261f] placeholder:text-[#a28f7d] outline-none transition focus:border-[#8e6a43]/35 focus:ring-4 focus:ring-[#8e6a43]/10" placeholder="Chúc bạn..."></textarea>
+              <textarea rows={4} name="message" className="w-full resize-none rounded-2xl border border-[#8e6a43]/12 bg-[#f8f2e7] px-5 py-4 text-[#2f261f] placeholder:text-[#a28f7d] outline-none transition focus:border-[#8e6a43]/35 focus:ring-4 focus:ring-[#8e6a43]/10" placeholder="Chúc bạn..."></textarea>
             </div>
             
             <button 
@@ -73,5 +97,5 @@ export default function RSVPForm() {
           </form>
         )}
       </div>
-    </section>    </ScrollReveal>  );
+    </section> </ScrollReveal> );
 }
