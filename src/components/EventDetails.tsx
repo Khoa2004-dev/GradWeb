@@ -15,9 +15,6 @@ export default function EventDetails() {
           <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-[#2a231d] sm:text-5xl">
             Thông tin sự kiện
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#6b5a4a] sm:text-base">
-            Tất cả thông tin được trình bày như một bộ thẻ cao cấp, đủ sang nhưng vẫn rất dễ đọc.
-          </p>
         </div>
 
         <div className="grid gap-6">
