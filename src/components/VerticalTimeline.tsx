@@ -37,7 +37,7 @@ const milestones = [
 export default function VerticalTimeline() {
   return (
     <ScrollReveal>
-      <section className="relative px-4 py-20 sm:py-32 bg-gradient-to-br from-[#f7f1e8]/40 to-[#e8dcc8]/20">
+      <section className="relative overflow-hidden px-4 py-20 sm:py-32 bg-gradient-to-br from-[#f7f1e8]/40 to-[#e8dcc8]/20">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-[-8rem] h-96 w-96 rounded-full bg-amber-200/20 blur-3xl opacity-30" />
         <div className="absolute bottom-1/4 right-[-6rem] h-80 w-80 rounded-full bg-[#d8b67e]/15 blur-3xl opacity-30" />

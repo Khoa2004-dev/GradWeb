@@ -38,7 +38,7 @@ export default function CodeEasterEgg() {
 
   return (
     <ScrollReveal>
-      <section className="relative px-4 py-20 sm:py-32">
+      <section className="relative overflow-hidden px-4 py-20 sm:py-32">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 right-[-10rem] h-96 w-96 rounded-full bg-[#6b5139]/10 blur-3xl opacity-30" />
       </div>

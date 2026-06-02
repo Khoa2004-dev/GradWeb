@@ -6,7 +6,7 @@ import ScrollReveal from "./ScrollReveal";
 export default function ReflectionLetter() {
   return (
     <ScrollReveal>
-      <section className="relative px-4 py-20 sm:py-32">
+      <section className="relative overflow-hidden px-4 py-20 sm:py-32">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-[#f7f1e8] via-white to-[#f4e4d1]" />
         <div className="absolute top-1/4 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-[#f4d3a4]/20 blur-3xl opacity-30" />

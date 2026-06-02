@@ -49,7 +49,7 @@ export default function CountdownBanner() {
 
   return (
     <ScrollReveal>
-      <section className="relative px-4 py-16 sm:py-24">
+      <section className="relative overflow-hidden px-4 py-16 sm:py-24">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-r from-[#f7f1e8] via-white to-[#f7f1e8] opacity-60" />
         <div className="absolute top-0 left-1/4 h-64 w-64 rounded-full bg-amber-200/30 blur-3xl opacity-40" />

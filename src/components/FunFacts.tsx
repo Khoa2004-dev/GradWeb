@@ -72,7 +72,7 @@ const stats: Stat[] = [
 export default function FunFacts() {
   return (
     <ScrollReveal>
-      <section className="relative px-4 py-20 sm:py-32 bg-gradient-to-br from-[#f4e4d1]/35 via-white to-[#ede1d0]/25">
+      <section className="relative overflow-hidden px-4 py-20 sm:py-32 bg-gradient-to-br from-[#f4e4d1]/35 via-white to-[#ede1d0]/25">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 right-[-10rem] h-96 w-96 rounded-full bg-[#d8b67e]/15 blur-3xl opacity-30" />
         <div className="absolute bottom-1/3 left-[-8rem] h-80 w-80 rounded-full bg-amber-200/15 blur-3xl opacity-30" />
