@@ -54,43 +54,42 @@ export default function VerticalTimeline() {
         </div>
 
         <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2 bg-gradient-to-b from-[#8f6a44] via-[#8a735d] to-[#6b5139]" />
+          {/* Vertical line: shifted to left-6 on mobile, centered on md and up */}
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2 bg-gradient-to-b from-[#8f6a44] via-[#8a735d] to-[#6b5139]" />
 
-          <div className="space-y-12">
+          <div className="space-y-12 md:space-y-16">
             {milestones.map((milestone, index) => {
               const Icon = milestone.icon;
               const isEven = index % 2 === 0;
 
               return (
-                <div key={index} className={`flex items-start ${isEven ? "flex-row" : "flex-row-reverse"}`}>
-                  {/* Content */}
-                  <div className={`w-1/2 ${isEven ? "text-right pr-12" : "text-left pl-12"}`}>
+                <div key={index} className={`relative flex flex-col md:flex-row items-start ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}>
+                  
+                  {/* Content: full width with left padding on mobile, 50% width on md and up */}
+                  <div className={`w-full md:w-1/2 pl-14 md:pl-0 ${isEven ? "md:text-right md:pr-12" : "md:text-left md:pl-12"}`}>
                     <div className="inline-block rounded-2xl border border-[#8e6a43]/15 bg-white/70 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#8f6a44] shadow-[0_12px_30px_-18px_rgba(124,91,60,0.25)] backdrop-blur-md">
                       {milestone.year}
                     </div>
-                    <h3 className="mt-4 text-xl font-semibold text-[#2a231d] leading-snug">
+                    <h3 className="mt-4 text-lg sm:text-xl font-semibold text-[#2a231d] leading-snug">
                       {milestone.title}
                     </h3>
-                    <p className="mt-2 text-[#6b5a4a] leading-relaxed">
+                    <p className="mt-2 text-sm sm:text-base text-[#6b5a4a] leading-relaxed">
                       {milestone.description}
                     </p>
                   </div>
 
-                  {/* Timeline dot with icon */}
-                  <div className="relative z-10 flex shrink-0 w-0 justify-center">
-                    <div className="absolute top-0 -translate-y-1/4 flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-4 border-[#f7f1e8] bg-white shadow-[0_12px_40px_-16px_rgba(124,91,60,0.45)]">
-                      <div 
-                        className="flex h-full w-full items-center justify-center rounded-full" 
-                        style={{ backgroundColor: `${milestone.color}15` }}
-                      >
-                        <Icon size={24} color={milestone.color} strokeWidth={2} />
-                      </div>
+                  {/* Timeline dot with icon: smaller on mobile and aligned to the left vertical line */}
+                  <div className="absolute left-6 md:left-1/2 top-2 md:top-0 -translate-x-1/2 -translate-y-1/4 md:-translate-y-1/4 z-10 flex h-10 w-10 md:h-16 md:w-16 items-center justify-center rounded-full border-4 border-[#f7f1e8] bg-white shadow-[0_12px_40px_-16px_rgba(124,91,60,0.45)]">
+                    <div 
+                      className="flex h-full w-full items-center justify-center rounded-full" 
+                      style={{ backgroundColor: `${milestone.color}15` }}
+                    >
+                      <Icon className="h-4 w-4 md:h-6 md:w-6" color={milestone.color} strokeWidth={2} />
                     </div>
                   </div>
                   
-                  {/* Empty space for the other half */}
-                  <div className="w-1/2" />
+                  {/* Empty space for the other half, hidden on mobile */}
+                  <div className="hidden md:block w-1/2" />
                 </div>
               );
             })}

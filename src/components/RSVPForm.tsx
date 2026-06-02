@@ -59,12 +59,12 @@ export default function RSVPForm() {
         </div>
         
         {status === "success" ? (
-          <div className="rounded-[2rem] border border-[#8e6a43]/12 bg-white/75 p-10 text-center shadow-[0_24px_80px_-48px_rgba(124,91,60,0.25)] backdrop-blur-md">
+          <div className="rounded-[2rem] border border-[#8e6a43]/12 bg-white/75 p-6 sm:p-10 text-center shadow-[0_24px_80px_-48px_rgba(124,91,60,0.25)] backdrop-blur-md">
             <h3 className="text-2xl font-semibold text-[#2a231d] sm:text-3xl">Cảm ơn bạn!</h3>
             <p className="mt-4 text-[#6b5a4a] sm:text-lg">Lời hồi đáp của bạn đã được ghi nhận. Hẹn gặp bạn tại buổi lễ nhé!</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-5 rounded-[2rem] border border-[#8e6a43]/12 bg-white/75 p-6 shadow-[0_24px_80px_-48px_rgba(124,91,60,0.25)] backdrop-blur-md sm:p-8">
+          <form onSubmit={handleSubmit} className="space-y-5 rounded-[2rem] border border-[#8e6a43]/12 bg-white/75 p-4 xs:p-6 shadow-[0_24px_80px_-48px_rgba(124,91,60,0.25)] backdrop-blur-md sm:p-8">
             {/* THÊM THUỘC TÍNH name="name" vào input */}
             <div>
               <label className="mb-2 block text-sm font-medium text-[#4e4338]">Tên của bạn là gì nhỉ?</label>

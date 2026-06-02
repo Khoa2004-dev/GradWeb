@@ -12,12 +12,12 @@ interface TimeLeft {
 
 const TimeCard = ({ value, label }: { value: number; label: string }) => (
   <div className="flex flex-col items-center">
-    <div className="rounded-2xl border-2 border-[#8f6a44]/20 bg-gradient-to-br from-white/80 to-white/60 p-4 sm:p-6 min-w-[70px] sm:min-w-[100px]">
-      <div className="text-3xl sm:text-4xl font-bold text-[#8f6a44] text-center font-mono">
+    <div className="rounded-2xl border-2 border-[#8f6a44]/20 bg-gradient-to-br from-white/80 to-white/60 p-3 xs:p-4 sm:p-6 min-w-[60px] xs:min-w-[70px] sm:min-w-[100px]">
+      <div className="text-2xl xs:text-3xl sm:text-4xl font-bold text-[#8f6a44] text-center font-mono">
         {String(value).padStart(2, "0")}
       </div>
     </div>
-    <span className="mt-3 text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-[#8a735d]">
+    <span className="mt-3 text-[10px] xs:text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-[#8a735d]">
       {label}
     </span>
   </div>
@@ -66,7 +66,7 @@ export default function CountdownBanner() {
           </p>
         </div>
 
-        <div className="flex justify-center items-center gap-4 sm:gap-6 flex-wrap">
+        <div className="flex justify-center items-center gap-2 xs:gap-3 sm:gap-6 flex-wrap">
           <TimeCard value={time.days} label="Ngày" />
           <div className="text-[#8a735d] text-2xl sm:text-3xl font-light mb-8 hidden sm:block">:</div>
           <TimeCard value={time.hours} label="Giờ" />

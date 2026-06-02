@@ -16,7 +16,7 @@ const config: Config = {
         gold: "#d4af37",      // Màu vàng đồng sang trọng
       },
       fontFamily: {
-        sans: ["var(--font-roboto)", "sans-serif"],
+        sans: ["var(--font-inter)", "sans-serif"],
         serif: ["var(--font-playfair)", "serif"],
       },
     },

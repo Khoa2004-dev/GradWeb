@@ -18,7 +18,7 @@ export default function EventDetails() {
         </div>
 
         <div className="grid gap-6">
-          <div className="rounded-[2rem] border border-[#8e6a43]/12 bg-white/75 p-6 shadow-[0_24px_80px_-48px_rgba(124,91,60,0.25)] backdrop-blur-xl sm:p-8">
+          <div className="rounded-[2rem] border border-[#8e6a43]/12 bg-white/75 p-4 xs:p-6 shadow-[0_24px_80px_-48px_rgba(124,91,60,0.25)] backdrop-blur-xl sm:p-8">
             <div className="mb-8 flex items-center gap-3 text-[#7d5c3e]">
               <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#8e6a43]/10 ring-1 ring-[#8e6a43]/15">
                 <MapPin className="h-6 w-6" />

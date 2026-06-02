@@ -20,11 +20,11 @@ export default function Hero() {
               Save the date
             </div>
 
-            <h1 className="mt-6 max-w-2xl font-[family-name:var(--font-playfair)] text-5xl font-semibold tracking-tight text-[#2a231d] sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 max-w-2xl font-[family-name:var(--font-playfair)] text-4xl font-semibold tracking-tight text-[#2a231d] sm:text-6xl lg:text-7xl">
               Lễ Tốt Nghiệp
             </h1>
 
-            <p className="mt-6 text-base leading-8 text-[#5e544b] sm:text-lg">
+            <p className="mt-6 text-sm xs:text-base leading-8 text-[#5e544b] sm:text-lg">
               Trân trọng kính mời mọi người đến tham dự buổi lễ tốt nghiệp này của mình, sự xuất hiện của mọi người trong ngày đặc biệt này sẽ là niềm hạnh phúc rất lớn đối với bản thân mình.  
             </p>
 
@@ -65,7 +65,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-[#8e6a43]/10 shadow-[0_20px_60px_-30px_rgba(124,91,60,0.35)]">
+          <div className="relative aspect-square w-full max-w-md mx-auto lg:max-w-none overflow-hidden rounded-2xl border border-[#8e6a43]/10 shadow-[0_20px_60px_-30px_rgba(124,91,60,0.35)]">
             <Image
               src="/images/photo1.png"
               alt="Ảnh cá nhân"

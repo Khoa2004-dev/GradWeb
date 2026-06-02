@@ -18,8 +18,9 @@ export async function POST(request: Request) {
     await redis.lpush("rsvp_list", JSON.stringify(rsvpData));
     return NextResponse.json({ success: true }, { status: 200 });
 
-  } catch (error: any) {
-    console.error("LỖI SẬP SERVER:", error.message);
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    console.error("LỖI SẬP SERVER:", errorMessage);
+    return NextResponse.json({ success: false, error: errorMessage }, { status: 500 });
   }
 }
