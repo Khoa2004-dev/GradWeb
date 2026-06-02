@@ -9,27 +9,27 @@ export default function RSVPForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
-    
+
     // 1. Tự động thu thập toàn bộ dữ liệu từ các ô Input trong Form
     const formData = new FormData(e.currentTarget);
     const name = formData.get("name");
     const attendance = formData.get("attendance");
     const message = formData.get("message");
-    
+
     try {
       // 2. BẮN DATA THẬT QUA BACKEND API
-      const res = await fetch('/api/rsvp', { 
-        method: 'POST', 
+      const res = await fetch('/api/rsvp', {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, attendance, message }) 
+        body: JSON.stringify({ name, attendance, message })
       });
-      
+
       if (!res.ok) {
         throw new Error("Lỗi phản hồi từ Server");
       }
-      
+
       // 3. Nếu thành công thì đổi trạng thái và bắn pháo giấy
       setStatus("success");
       confetti({
@@ -49,53 +49,53 @@ export default function RSVPForm() {
   return (
     <ScrollReveal>
       <section id="rsvp" className="px-4 py-20 sm:py-24">
-      <div className="mx-auto max-w-2xl">
-        <div className="mb-10 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8a735d]">RSVP</p>
-          <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-[#2a231d] sm:text-5xl">Xác nhận tham dự</h2>
-          <p className="mx-auto mt-4 text-sm leading-7 text-[#6b5a4a] sm:text-base">
-            Chỉ mất vài giây thôi, nhưng nó giúp mình chuẩn bị cho các bạn chu đáo hơn rất nhiều.
-          </p>
-        </div>
-        
-        {status === "success" ? (
-          <div className="rounded-[2rem] border border-[#8e6a43]/12 bg-white/75 p-6 sm:p-10 text-center shadow-[0_24px_80px_-48px_rgba(124,91,60,0.25)] backdrop-blur-md">
-            <h3 className="text-2xl font-semibold text-[#2a231d] sm:text-3xl">Cảm ơn bạn!</h3>
-            <p className="mt-4 text-[#6b5a4a] sm:text-lg">Lời hồi đáp của bạn đã được ghi nhận. Hẹn gặp bạn tại buổi lễ nhé!</p>
+        <div className="mx-auto max-w-2xl">
+          <div className="mb-10 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8a735d]">RSVP</p>
+            <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-[#2a231d] sm:text-5xl">Xác nhận tham dự</h2>
+            <p className="mx-auto mt-4 text-sm leading-7 text-[#6b5a4a] sm:text-base">
+              Chỉ mất vài giây thôi, nhưng nó giúp mình chuẩn bị cho các bạn chu đáo hơn rất nhiều.
+            </p>
           </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-5 rounded-[2rem] border border-[#8e6a43]/12 bg-white/75 p-4 xs:p-6 shadow-[0_24px_80px_-48px_rgba(124,91,60,0.25)] backdrop-blur-md sm:p-8">
-            {/* THÊM THUỘC TÍNH name="name" vào input */}
-            <div>
-              <label className="mb-2 block text-sm font-medium text-[#4e4338]">Tên của bạn là gì nhỉ?</label>
-              <input required name="name" type="text" className="w-full rounded-2xl border border-[#8e6a43]/12 bg-[#f8f2e7] px-5 py-4 text-[#2f261f] placeholder:text-[#a28f7d] outline-none transition focus:border-[#8e6a43]/35 focus:ring-4 focus:ring-[#8e6a43]/10" placeholder="Nguyễn Văn A" />
-            </div>
-            
-            {/* THÊM THUỘC TÍNH name="attendance" vào select */}
-            <div>
-              <label className="mb-2 block text-sm font-medium text-[#4e4338]">Bạn có tham dự được không?</label>
-              <select required name="attendance" className="w-full rounded-2xl border border-[#8e6a43]/12 bg-[#f8f2e7] px-5 py-4 text-[#2f261f] outline-none transition focus:border-[#8e6a43]/35 focus:ring-4 focus:ring-[#8e6a43]/10 [&>option]:text-slate-900">
-                <option value="yes">Chắc chắn có mặt!</option>
-                <option value="maybe">Mình sẽ cố gắng thu xếp</option>
-                <option value="no">Tiếc quá, mình bận mất rồi</option>
-              </select>
-            </div>
 
-            {/* THÊM THUỘC TÍNH name="message" vào textarea */}
-            <div>
-              <label className="mb-2 block text-sm font-medium text-[#4e4338]">Gửi vài lời chúc cho mình nhé!</label>
-              <textarea rows={4} name="message" className="w-full resize-none rounded-2xl border border-[#8e6a43]/12 bg-[#f8f2e7] px-5 py-4 text-[#2f261f] placeholder:text-[#a28f7d] outline-none transition focus:border-[#8e6a43]/35 focus:ring-4 focus:ring-[#8e6a43]/10" placeholder="Chúc bạn..."></textarea>
+          {status === "success" ? (
+            <div className="rounded-[2rem] border border-[#8e6a43]/12 bg-white/75 p-6 sm:p-10 text-center shadow-[0_24px_80px_-48px_rgba(124,91,60,0.25)] backdrop-blur-md">
+              <h3 className="text-2xl font-semibold text-[#2a231d] sm:text-3xl">Cảm ơn bạn!</h3>
+              <p className="mt-4 text-[#6b5a4a] sm:text-lg">Lời hồi đáp của bạn đã được ghi nhận. Hẹn gặp bạn tại buổi lễ nhé!</p>
             </div>
-            
-            <button 
-              disabled={status === "loading"} 
-              type="submit" 
-              className="mt-4 w-full rounded-2xl bg-[#8f6a44] py-4 text-base font-semibold text-[#fffaf4] transition hover:bg-[#7a5837] disabled:cursor-not-allowed disabled:opacity-70"
-            >
-              {status === "loading" ? "Đang gửi..." : "Gửi Xác Nhận"}
-            </button>
-          </form>
-        )}
-      </div>
-    </section> </ScrollReveal> );
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-5 rounded-[2rem] border border-[#8e6a43]/12 bg-white/75 p-4 xs:p-6 shadow-[0_24px_80px_-48px_rgba(124,91,60,0.25)] backdrop-blur-md sm:p-8">
+              {/* THÊM THUỘC TÍNH name="name" vào input */}
+              <div>
+                <label htmlFor="rsvp-name" className="mb-2 block text-sm font-medium text-[#4e4338]">Tên của bạn là gì nhỉ?</label>
+                <input id="rsvp-name" required name="name" type="text" className="w-full rounded-2xl border border-[#8e6a43]/12 bg-[#f8f2e7] px-5 py-4 text-[#2f261f] placeholder:text-[#a28f7d] outline-none transition focus:border-[#8e6a43]/35 focus:ring-4 focus:ring-[#8e6a43]/10" placeholder="Nguyễn Văn A" />
+              </div>
+
+              {/* THÊM THUỘC TÍNH name="attendance" vào select */}
+              <div>
+                <label htmlFor="rsvp-attendance" className="mb-2 block text-sm font-medium text-[#4e4338]">Bạn có tham dự được không?</label>
+                <select id="rsvp-attendance" required name="attendance" className="w-full rounded-2xl border border-[#8e6a43]/12 bg-[#f8f2e7] px-5 py-4 text-[#2f261f] outline-none transition focus:border-[#8e6a43]/35 focus:ring-4 focus:ring-[#8e6a43]/10 [&>option]:text-slate-900">
+                  <option value="yes">Chắc chắn có mặt!</option>
+                  <option value="maybe">Mình sẽ cố gắng thu xếp</option>
+                  <option value="no">Tiếc quá, mình bận mất rồi</option>
+                </select>
+              </div>
+
+              {/* THÊM THUỘC TÍNH name="message" vào textarea */}
+              <div>
+                <label htmlFor="rsvp-message" className="mb-2 block text-sm font-medium text-[#4e4338]">Gửi vài lời chúc cho mình nhé!</label>
+                <textarea id="rsvp-message" rows={4} name="message" className="w-full resize-none rounded-2xl border border-[#8e6a43]/12 bg-[#f8f2e7] px-5 py-4 text-[#2f261f] placeholder:text-[#a28f7d] outline-none transition focus:border-[#8e6a43]/35 focus:ring-4 focus:ring-[#8e6a43]/10" placeholder="Chúc bạn..."></textarea>
+              </div>
+
+              <button
+                disabled={status === "loading"}
+                type="submit"
+                className="mt-4 w-full rounded-2xl bg-[#8f6a44] py-4 text-base font-semibold text-[#fffaf4] transition hover:bg-[#7a5837] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#8f6a44]/50 disabled:cursor-not-allowed disabled:opacity-70"
+              >
+                {status === "loading" ? "Đang gửi..." : "Gửi Xác Nhận"}
+              </button>
+            </form>
+          )}
+        </div>
+      </section> </ScrollReveal>);
 }

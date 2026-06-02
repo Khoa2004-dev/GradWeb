@@ -16,11 +16,11 @@ export default function Hero() {
       <div className="relative mx-auto flex min-h-[calc(100vh-3rem)] max-w-7xl items-center">
         <div className="grid gap-7 lg:grid-cols-[1.4fr_0.8fr] lg:items-center">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#8e6a43]/15 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#7d5c3e] shadow-[0_12px_30px_-18px_rgba(124,91,60,0.25)] backdrop-blur">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#8e6a43]/15 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#7d5c3e] shadow-[0_12px_30px_-18px_rgba(124,91,60,0.25)] backdrop-blur">
               Save the date
             </div>
 
-            <h1 className="mt-6 max-w-2xl font-[family-name:var(--font-playfair)] text-4xl font-semibold tracking-tight text-[#2a231d] sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 max-w-2xl font-serif text-4xl font-semibold tracking-tight text-[#2a231d] sm:text-6xl lg:text-7xl">
               Lễ Tốt Nghiệp
             </h1>
 
@@ -53,12 +53,12 @@ export default function Hero() {
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               <div className="rounded-3xl border border-[#8e6a43]/12 bg-white/75 p-4 shadow-[0_20px_40px_-28px_rgba(124,91,60,0.25)] backdrop-blur-xl">
-                <p className="text-[11px] uppercase tracking-[0.28em] text-[#8a735d]">Thời gian</p>
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#7d5c3e]">Thời gian</p>
                 <p className="mt-2 text-sm font-semibold text-[#2f261f] space-y-2">09.06.2026</p>
                 <p className="text-sm text-[#6b5a4a] space-y-2">11:00 - 12:00</p>
               </div>
               <div className="rounded-3xl border border-[#8e6a43]/12 bg-white/75 p-4 shadow-[0_20px_40px_-28px_rgba(124,91,60,0.25)] backdrop-blur-xl">
-                <p className="text-[11px] uppercase tracking-[0.28em] text-[#8a735d]">Địa điểm</p>
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#7d5c3e]">Địa điểm</p>
                 <p className="mt-2 text-sm font-semibold text-[#2f261f] space-y-2">Trường Đại học Công nghệ Thông tin</p>
                 <p className="text-sm text-[#6b5a4a] space-y-2">Khu phố 34, Phường Linh Xuân, TP. Hồ Chí Minh.</p>
               </div>
@@ -72,6 +72,7 @@ export default function Hero() {
               width={300}
               height={300}
               priority
+              sizes="(max-width: 768px) 100vw, 400px"
               className="h-full w-full object-cover"
             />
           </div>

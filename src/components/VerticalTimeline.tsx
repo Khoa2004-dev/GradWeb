@@ -30,7 +30,7 @@ const milestones = [
     title: "Thực tập & đại học",
     description: "Chặng cuối cùng, chuẩn bị bước vào hành trình mới với những trải nghiệm thực tế",
     icon: Briefcase,
-    color: "#8a735d"
+    color: "#7d5c3e"
   }
 ];
 
@@ -45,7 +45,7 @@ export default function VerticalTimeline() {
 
       <div className="relative mx-auto max-w-4xl">
         <div className="mb-16 text-center">
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold text-[#2a231d] sm:text-5xl">
+          <h2 className="font-serif text-4xl font-semibold text-[#2a231d] sm:text-5xl">
             Hành Trình 4 Năm
           </h2>
           <p className="mt-4 text-lg text-[#5e544b]">
@@ -55,7 +55,7 @@ export default function VerticalTimeline() {
 
         <div className="relative">
           {/* Vertical line: shifted to left-6 on mobile, centered on md and up */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2 bg-gradient-to-b from-[#8f6a44] via-[#8a735d] to-[#6b5139]" />
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2 bg-gradient-to-b from-[#8f6a44] via-[#7d5c3e] to-[#6b5139]" />
 
           <div className="space-y-12 md:space-y-16">
             {milestones.map((milestone, index) => {

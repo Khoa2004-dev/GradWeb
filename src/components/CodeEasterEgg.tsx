@@ -45,7 +45,7 @@ export default function CodeEasterEgg() {
 
       <div className="relative mx-auto max-w-4xl">
         <div className="mb-12 text-center">
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold text-[#2a231d] sm:text-5xl">
+          <h2 className="font-serif text-4xl font-semibold text-[#2a231d] sm:text-5xl">
             Easter Egg
           </h2>
           <p className="mt-4 text-lg text-[#5e544b]">

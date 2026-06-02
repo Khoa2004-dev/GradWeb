@@ -96,7 +96,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
               <div className="h-3 w-3 rounded-full bg-[#eab308]" />
               <div className="h-3 w-3 rounded-full bg-[#22c55e]" />
             </div>
-            <span className="text-xs text-[#8a735d] ml-3 font-mono">graduation-2026</span>
+            <span className="text-xs text-[#7d5c3e] ml-3 font-mono">graduation-2026</span>
           </div>
 
           {/* Log lines */}
@@ -112,7 +112,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
                     animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
                   }} />
                 )}
-                {log.isComplete && <span className="text-[#8a735d]">✓</span>}
+                {log.isComplete && <span className="text-[#7d5c3e]">✓</span>}
               </div>
             ))}
           </div>
@@ -121,13 +121,13 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
           {showMessage && (
             <div className="animate-fade-in space-y-4">
               <div className="text-center">
-                <h1 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-[#2a231d] mb-2">
+                <h1 className="font-serif text-3xl font-bold text-[#2a231d] mb-2">
                   Hành Trình Tốt Nghiệp
                 </h1>
                 <div className="h-1 w-32 mx-auto bg-gradient-to-r from-transparent via-[#8f6a44] to-transparent rounded-full" />
               </div>
 
-              <p className="text-center text-[#8a735d] font-mono text-sm">
+              <p className="text-center text-[#7d5c3e] font-mono text-sm animate-pulse">
                 Nhấn phím bất kỳ hoặc click để tiếp tục...
               </p>
             </div>

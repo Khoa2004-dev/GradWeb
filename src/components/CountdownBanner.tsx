@@ -17,7 +17,7 @@ const TimeCard = ({ value, label }: { value: number; label: string }) => (
         {String(value).padStart(2, "0")}
       </div>
     </div>
-    <span className="mt-3 text-[10px] xs:text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-[#8a735d]">
+    <span className="mt-3 text-[10px] xs:text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-[#7d5c3e]">
       {label}
     </span>
   </div>
@@ -58,7 +58,7 @@ export default function CountdownBanner() {
 
       <div className="relative mx-auto max-w-5xl">
         <div className="text-center mb-12">
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold text-[#2a231d] sm:text-5xl mb-3">
+          <h2 className="font-serif text-4xl font-semibold text-[#2a231d] sm:text-5xl mb-3">
             Chỉ Còn Lại
           </h2>
           <p className="text-lg text-[#5e544b]">
@@ -68,11 +68,11 @@ export default function CountdownBanner() {
 
         <div className="flex justify-center items-center gap-2 xs:gap-3 sm:gap-6 flex-wrap">
           <TimeCard value={time.days} label="Ngày" />
-          <div className="text-[#8a735d] text-2xl sm:text-3xl font-light mb-8 hidden sm:block">:</div>
+          <div className="text-[#7d5c3e] text-2xl sm:text-3xl font-light mb-8 hidden sm:block">:</div>
           <TimeCard value={time.hours} label="Giờ" />
-          <div className="text-[#8a735d] text-2xl sm:text-3xl font-light mb-8 hidden sm:block">:</div>
+          <div className="text-[#7d5c3e] text-2xl sm:text-3xl font-light mb-8 hidden sm:block">:</div>
           <TimeCard value={time.minutes} label="Phút" />
-          <div className="text-[#8a735d] text-2xl sm:text-3xl font-light mb-8 hidden sm:block">:</div>
+          <div className="text-[#7d5c3e] text-2xl sm:text-3xl font-light mb-8 hidden sm:block">:</div>
           <TimeCard value={time.seconds} label="Giây" />
         </div>
 

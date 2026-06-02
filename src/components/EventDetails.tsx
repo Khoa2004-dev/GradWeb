@@ -11,8 +11,8 @@ export default function EventDetails() {
       <section id="event" className="px-4 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8a735d]">Event details</p>
-          <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-semibold text-[#2a231d] sm:text-5xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#7d5c3e]">Event details</p>
+          <h2 className="mt-4 font-serif text-3xl font-semibold text-[#2a231d] sm:text-5xl">
             Thông tin sự kiện
           </h2>
         </div>
@@ -25,7 +25,7 @@ export default function EventDetails() {
               </span>
               <div>
                 <h3 className="text-xl font-semibold text-[#2a231d] sm:text-2xl">Địa điểm</h3>
-                <p className="text-sm text-[#8a735d]">Thông tin đường đi và gửi xe</p>
+                <p className="text-sm text-[#7d5c3e]">Thông tin đường đi và gửi xe</p>
               </div>
             </div>
 
@@ -35,11 +35,12 @@ export default function EventDetails() {
             <div className="mt-6 overflow-hidden rounded-2xl border border-[#8e6a43]/12 shadow-[0_12px_40px_-20px_rgba(124,91,60,0.25)]">
               <iframe
                 src={MAP_EMBED_URL}
+                title="Bản đồ địa điểm tổ chức"
                 width="100%"
                 height="280"
                 style={{ border: 0 }}
                 allowFullScreen={true}
-                // loading="lazy"
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>

@@ -21,7 +21,7 @@ function AnimatedCounter({ stat }: { stat: Stat }) {
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
-          
+
           const duration = 2000; // 2 seconds
           let startTime: number | null = null;
 
@@ -29,7 +29,7 @@ function AnimatedCounter({ stat }: { stat: Stat }) {
             if (!startTime) startTime = currentTime;
             const progress = Math.min((currentTime - startTime) / duration, 1);
             const current = progress * stat.value;
-            
+
             setCount(Math.floor(current));
 
             if (progress < 1) {
@@ -73,39 +73,39 @@ export default function FunFacts() {
   return (
     <ScrollReveal>
       <section className="relative overflow-hidden px-4 py-20 sm:py-32 bg-gradient-to-br from-[#f4e4d1]/35 via-white to-[#ede1d0]/25">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 right-[-10rem] h-96 w-96 rounded-full bg-[#d8b67e]/15 blur-3xl opacity-30" />
-        <div className="absolute bottom-1/3 left-[-8rem] h-80 w-80 rounded-full bg-amber-200/15 blur-3xl opacity-30" />
-      </div>
-
-      <div className="relative mx-auto max-w-6xl">
-        <div className="mb-16 text-center">
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-semibold text-[#2a231d] sm:text-5xl">
-            Con Số Biết Nói
-          </h2>
-          <p className="mt-4 text-lg text-[#5e544b]">
-            Hành trình được kể bằng những con số, những kỷ niệm, và những lần bứt phá
-          </p>
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/3 right-[-10rem] h-96 w-96 rounded-full bg-[#d8b67e]/15 blur-3xl opacity-30" />
+          <div className="absolute bottom-1/3 left-[-8rem] h-80 w-80 rounded-full bg-amber-200/15 blur-3xl opacity-30" />
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="group rounded-2xl border border-[#8e6a43]/12 bg-white/70 p-8 shadow-[0_20px_40px_-28px_rgba(124,91,60,0.25)] backdrop-blur-xl transition-all duration-300 hover:border-[#8e6a43]/25 hover:bg-white/80 hover:shadow-[0_25px_50px_-32px_rgba(124,91,60,0.35)]"
-            >
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-[#8f6a44]/10 group-hover:bg-[#8f6a44]/15 transition-colors duration-300">
-                <div className="h-6 w-6 rounded-full border-2 border-[#8f6a44]" />
+        <div className="relative mx-auto max-w-6xl">
+          <div className="mb-16 text-center">
+            <h2 className="font-serif text-4xl font-semibold text-[#2a231d] sm:text-5xl">
+              Những Con Số Biết Nói
+            </h2>
+            <p className="mt-4 text-lg text-[#5e544b]">
+              Hành trình được kể bằng những con số, những kỷ niệm, và những lần bứt phá
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="group rounded-2xl border border-[#8e6a43]/12 bg-white/70 p-8 shadow-[0_20px_40px_-28px_rgba(124,91,60,0.25)] backdrop-blur-xl transition-all duration-300 hover:border-[#8e6a43]/25 hover:bg-white/80 hover:shadow-[0_25px_50px_-32px_rgba(124,91,60,0.35)]"
+              >
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-[#8f6a44]/10 group-hover:bg-[#8f6a44]/15 transition-colors duration-300">
+                  <div className="h-6 w-6 rounded-full border-2 border-[#8f6a44]" />
+                </div>
+                <AnimatedCounter stat={stat} />
+                <p className="mt-4 text-sm text-[#6b5a4a] leading-relaxed">
+                  {stat.label}
+                </p>
               </div>
-              <AnimatedCounter stat={stat} />
-              <p className="mt-4 text-sm text-[#6b5a4a] leading-relaxed">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </ScrollReveal>
   );
 }
