@@ -7,7 +7,7 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 
 export const metadata: Metadata = {
   title: "Lễ Tốt Nghiệp | Trân trọng kính mời",
-  description: "Website mời tham dự lễ tốt nghiệp ngày 09.06.2026 tại UIT, TP.HCM. Một buổi lễ ấm, sang và có điểm nhấn riêng.",
+  description: "Website mời tham dự lễ tốt nghiệp ngày 09.06.2026 tại UIT của Khoa",
   keywords: ["lễ tốt nghiệp", "graduation", "UIT", "2026"],
   authors: [{ name: "Graduation Ceremony" }],
   openGraph: {
