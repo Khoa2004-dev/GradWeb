@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     locale: "vi_VN",
     url: "https://graduation.example.com",
     siteName: "Lễ Tốt Nghiệp 2026",
-    title: "Lễ Tốt Nghiệp | Trân trọng kính mời",
-    description: "Lễ tốt nghiệp ngày 09.06.2026 tại UIT, TP.HCM. Một buổi lễ ấm, sang và có điểm nhấn riêng.",
+    title: "Lễ Tốt Nghiệp của Khoa",
+    description: "Lễ tốt nghiệp ngày 09.06.2026 tại UIT, rất mong các bạn đến dự.",
     images: [
       {
         url: "/opengraph-image.png",
